@@ -1,10 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-declare global {
-  interface Window {
-    ethereum?: any;
-  }
-}
+import { useState } from 'react';
 
 const BlockchainConnector = () => {
   const [account, setAccount] = useState<string | null>(null);

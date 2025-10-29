@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import BlockchainConnector from './components/BlockchainConnector';
 
 function App() {
@@ -24,7 +24,6 @@ function App() {
   ]);
   
   const [newPost, setNewPost] = useState('');
-  const [isBlockchainConnected, setIsBlockchainConnected] = useState(false);
 
   const createPost = () => {
     if (newPost.trim()) {
@@ -39,12 +38,7 @@ function App() {
       };
       setPosts([post, ...posts]);
       setNewPost('');
-      
-      if (isBlockchainConnected) {
-        alert('✅ Post created and stored on blockchain!');
-      } else {
-        alert('📝 Post created locally. Connect wallet for blockchain storage.');
-      }
+      alert('✅ Post created successfully!');
     }
   };
 
